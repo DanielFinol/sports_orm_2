@@ -28,5 +28,53 @@
 				<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
 			{% endfor %}
 		</ol>
+		<h1>equipos en la Atlantic Soccer Conference</h1>
+		<ol>
+			{% for team in teams_1 %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>jugadores (actuales) en los Boston Penguins</h1>
+		<ol>
+			{% for player in players_2 %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>		
+		<h1>jugadores (actuales) en  la International Collegiate Baseball Conference</h1>
+		<ol>
+			{% for player in players_3 %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>		
+		<h1>todos los jugadores de fútbol</h1>
+		<ol>
+			{% for player in players_5 %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>		
+		<h1>ligas con un jugador (actual) llamado "Sophia"</h1>
+		<ol>
+			{% for league in leagues_7 %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>cada equipo para el que Jacob Gray jugó antes de unirse a los Oregon Colts</h1>
+		<ol>
+			{% for team in teams_12 %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>equipos que han tenido 12 o más jugadores</h1>
+		<ol>
+			{% for team in teams_14 %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>todos los jugadores y el número de equipos para los que jugó, ordenados por la cantidad de equipos</h1>
+		<ol>
+			{% for player in players_15 %}
+				<li>{{player.first_name}} {{player.last_name}} {{player.n_equipos}}</li>
+			{% endfor %}
+		</ol>			
 	</body>
 </html>
